@@ -41,13 +41,12 @@ gem 'spring',        group: :development
 
 gem "haml-rails"
 gem "mysql2"
-gem "selections", git: "https://github.com/nigelr/selections.git"
 gem "capistrano", "~> 2.0"
 gem "rvm-capistrano", "~> 1.4.4"
 gem "devise"
 gem "cancan"
 gem "bootstrap-sass"
-gem "kitestrings", git: "https://github.com/2rk/kitestrings.git"
+gem "kitestrings"
 group :development, :test do
   gem "awesome_print"
   gem "capybara"
@@ -55,9 +54,8 @@ group :development, :test do
   gem "fracture"
   gem "database_cleaner"
   gem "hirb"
-  gem "rspec", "~> 2.14"
+  gem "rspec", "~> 2.99"
   gem "rspec-rails"
   gem "shoulda-matchers"
   gem "timecop"
-  gem "zeus", "~> 0.13.4.pre", require: false
 end

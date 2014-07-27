@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727004247) do
+ActiveRecord::Schema.define(version: 20140727032506) do
 
   create_table "profiles", force: true do |t|
     t.integer  "bay_films_watched"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140727004247) do
     t.datetime "updated_at"
     t.integer  "bad_jokes_told"
     t.integer  "dead_horses_beaten"
+    t.boolean  "the_highlight_of_shia_labeoufs_career"
   end
 
   create_table "users", force: true do |t|

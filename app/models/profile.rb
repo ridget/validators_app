@@ -18,6 +18,8 @@ class Profile < ActiveRecord::Base
 
   validates :great_bay_films, :inclusion => { :in => ["Bad Boys"] }, :exclusion => { :in => ["The Rock" "Armageddon" "Pearl Harbor", "Transformers: Revenge of the Fallen", "Transformers: Dark of the Moon", "Transformers: Age of Extinction"]}
 
+  validates_acceptance_of :the_highlight_of_shia_labeoufs_career, :message => 'You must accept that Transformers was the highlight of Shia Labeoufs career'
+
   # collect conditional validations using with options
   # passing symbol as a method
   with_options :if => :is_presenter? do |presenter|

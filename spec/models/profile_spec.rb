@@ -4,6 +4,7 @@ describe Profile do
 
   describe 'validations' do
     it { should validate_numericality_of(:bay_films_watched).is_less_than_or_equal_to(0).only_integer }
+    it { should validate_acceptance_of(:the_highlight_of_shia_labeoufs_career).with_message('You must accept that Transformers was the highlight of Shia Labeoufs career') }
     it { should allow_value('Crap').for(:megan_foxs_acting_ability) }
     it { should_not allow_value('Amazing').for(:megan_foxs_acting_ability) }
     #

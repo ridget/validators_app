@@ -20,6 +20,8 @@ class Profile < ActiveRecord::Base
 
   validates_acceptance_of :the_highlight_of_shia_labeoufs_career, :message => 'You must accept that Transformers was the highlight of Shia Labeoufs career'
 
+  validates :plot, :explosions => true
+
   # collect conditional validations using with options
   # passing symbol as a method
   with_options :if => :is_presenter? do |presenter|

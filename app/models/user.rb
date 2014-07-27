@@ -21,4 +21,6 @@ class User < ActiveRecord::Base
 
   has_one :profile
 
+  # inspects a string, must have 2 explosions per word
+
 end

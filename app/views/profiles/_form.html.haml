@@ -1,0 +1,19 @@
+= form_for @profile, html: { "role" =>"form", class: "form-horizontal"} do |f|
+  - if @profile.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@profile.errors.count, 'error')} prohibited this profile from being saved:"
+      %ul
+        - @profile.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :bay_films_watched, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.number_field :bay_films_watched, class: 'form-control input-sm'
+  .form-group
+    = f.label :megan_foxs_acting_ability, class: 'col-md-2 control-label'
+    .col-md-6
+      = f.text_field :megan_foxs_acting_ability, class: 'form-control input-sm'
+  .form-group
+    .col-md-6.col-md-offset-2
+      = f.submit 'Save', class: 'btn btn-success btn-sm'

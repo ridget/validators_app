@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :profiles
+
+  devise_for :users
   resources(:selections, only: :index) { resources :selections, except: :show }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

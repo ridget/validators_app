@@ -54,7 +54,7 @@ group :development, :test do
   gem "fracture"
   gem "database_cleaner"
   gem "hirb"
-  gem "rspec", "~> 2.99"
+  gem "rspec"
   gem "rspec-rails"
   gem "shoulda-matchers"
   gem "timecop"

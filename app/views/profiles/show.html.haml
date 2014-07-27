@@ -1,0 +1,11 @@
+.row
+  .col-md-12
+
+    %p
+      %b Bay films watched:
+      = @profile.bay_films_watched
+    %p
+      %b Megan foxs acting ability:
+      = @profile.megan_foxs_acting_ability
+  
+    = link_to 'Edit', edit_profile_path(@profile), id: :edit_profile_link, class: 'btn btn-sm btn-primary'

@@ -1,0 +1,6 @@
+.page-header
+  %h1 New profile
+.row
+  .col-md-12
+    = render 'form'
+    = link_to 'Cancel', profiles_path, id: :cancel_new_profile_link, class: 'btn btn-sm btn-warning'

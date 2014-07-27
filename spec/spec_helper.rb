@@ -18,10 +18,6 @@ ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
 
-  config.include RequestAdditions, :type => :request
-
-  config.include LogCanCanErrors, :type => :controller
-
   config.include Devise::TestHelpers, :type => :controllers
 
   config.include FactoryGirl::Syntax::Methods

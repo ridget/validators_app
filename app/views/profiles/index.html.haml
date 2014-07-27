@@ -1,0 +1,19 @@
+.page-header
+  %h1 Listing profiles
+
+.row
+  .col-md-12
+    %table.table.table-striped
+      %tr
+        %th Bay films watched
+        %th Megan foxs acting ability
+
+
+      - @profiles.each do |profile|
+        %tr
+          %td= link_to profile.bay_films_watched, profile_path(profile)
+          %td= profile.megan_foxs_acting_ability
+
+    %br
+
+    = link_to 'New Profile', new_profile_path, id: :new_profile_link, class: 'btn btn-primary btn-sm'

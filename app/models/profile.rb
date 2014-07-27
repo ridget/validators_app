@@ -19,6 +19,7 @@ class Profile < ActiveRecord::Base
   validates :great_bay_films, :inclusion => { :in => ["Bad Boys"] }, :exclusion => { :in => ["The Rock" "Armageddon" "Pearl Harbor", "Transformers: Revenge of the Fallen", "Transformers: Dark of the Moon", "Transformers: Age of Extinction"]}
 
   validates_acceptance_of :the_highlight_of_shia_labeoufs_career, :message => 'You must accept that Transformers was the highlight of Shia Labeoufs career'
+  # validates :the_highlight_of_shia_labeoufs_career, :acceptance => { :message => 'You must accept that Transformers was the highlight of Shia Labeoufs career' }
 
   validates :plot, :explosions => true
 
@@ -31,6 +32,10 @@ class Profile < ActiveRecord::Base
 
   def is_presenter?
     true
+  end
+
+  def foo
+    EachValidator
   end
 
 end

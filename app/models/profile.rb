@@ -11,7 +11,7 @@ class Profile < ActiveRecord::Base
   # equal to
   # odd
   # even
-  validates :bay_films_watched, :presence => true, :numericality => { :only_integer => true, :less_than_or_equal_to => 0 }
+  validates :bay_films_watched, :presence => true, :numericality => { :only_integer => true, :equal_to => 0 }
 
 
   validates_format_of :megan_foxs_acting_ability, :with => /Crap/, :message => "Let's be honest there is no chance of an oscar any time soon"
@@ -33,9 +33,4 @@ class Profile < ActiveRecord::Base
   def is_presenter?
     true
   end
-
-  def foo
-    EachValidator
-  end
-
 end
